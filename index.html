@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note saver</title>
+    <style rel="stylesheet" href="note.css"></style>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navbar {
+            top: 0px;
+            position: sticky;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(134, 126, 116);
+            align-items: center;
+        }
+
+        #navbar>h2 {
+            margin: 3px auto;
+            text-align: center;
+            font-size: 2rem;
+        }
+        #searchBar{
+            border-radius: 4px;
+            text-align: center;
+            border:1px solid burlywood
+        }
+
+        #addNoteContainer {
+            margin: 5px auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #textBox ,#textBoxTitle{
+            border-radius: 6px;
+            border: solid burlywood;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 2px;
+        }
+
+        #showNotes {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .noteCard {
+            padding: 5px;
+            margin: 1rem .3rem;
+            width:fit-content;
+            border: 1.5px solid #882222;
+            border-radius: 4px;
+        }
+        .noteCard>p {
+            text-align: justify;
+            width: fit-content;
+        }
+
+        .noteCardButtons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .deleteNote {
+            margin: 3px;
+            color: red;
+            background-color: honeydew;
+            border-radius: 3px;
+            padding: 3px;
+        }
+        .deleteNote:hover {
+            color: white;
+            background-color: red;
+        }
+
+        .updateNote {
+            margin: 3px;color: blue;
+            background-color: honeydew;
+            border-radius: 3px;
+            padding: 3px;
+        }
+        .updateNote:hover {
+            color: white;
+            background-color: blue;
+        }
+        #addNote {
+            margin: 3px;color: green;
+            background-color: honeydew;
+            border-radius: 3px;
+            padding: 8px;
+        }
+        #addNote:hover {
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <h2>Syed Notes</h2>
+        <div>
+            <input type="text" id="searchBar" placeholder="Search by Title">
+        </div>
+    </nav>
+    <div id="addNoteContainer">
+
+        <textarea id="textBoxTitle" placeholder="enter the title here"></textarea>
+        <textarea id="textBox" rows="6" cols="30" placeholder="enter the text here"></textarea>
+        <hr>
+        <button id="addNote" >Add Note</button>
+    </div>
+
+
+    <div id="showNotes">
+       
+    </div>
+    <script src="note.js"> </script>
+</body>
+
+</html>
